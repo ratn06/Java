@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class WhileLoop {
     public static void main(String[] args) {
 //TASK 1-print the addition from 1to 5 = 15
@@ -76,17 +78,36 @@ public class WhileLoop {
           // }  
           // System.out.println(sum); 
 //TASK 9 - print even number betweeen  1 to 17 
-          int i = 2;
-          while (i<=17) 
-            {
-              if(i%2==0)
-              {
-                System.out.println(i);
-              }
-              i+=2;
+          // int i = 2;
+          // while (i<=17) 
+          //   {
+          //     if(i%2==0)
+          //     {
+          //       System.out.println(i);
+          //     }
+          //     i+=2;
+          //   }
+   
+        Scanner sc = new Scanner(System.in);
+        
+        // "true" means this loop will run forever... unless we break it.
+        while (true) {
+            System.out.println("Enter a command (type 'exit' to quit): ");
+            String userInput = sc.nextLine(); // Grabbing text instead of numbers
+            
+            // To compare Strings in Java, we DO NOT use ==
+            // We MUST use .equals() or .equalsIgnoreCase()
+            if (userInput.equalsIgnoreCase("exit")) {
+                System.out.println("Shutting down...");
+                break; // The emergency stop button!
             }
             
-                   
+            System.out.println("You typed: " + userInput);
+        }
     }
+}
+            
+                   
+    
 
- }
+ 
